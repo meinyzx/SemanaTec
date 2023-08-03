@@ -16,7 +16,7 @@ const loop = setInterval(() =>{
         const obstaculoPosition = obstaculo.offsetLeft;
         const pessoaPosition = window.getComputedStyle(pessoa).bottom.replace('px');
 
-        console.log(marioPosition)
+        console.log(pessoaPosition)
         console.log(obstaculoPosition)
 
       if(obstaculoPosition < 120 && obstaculoPosition > 0 && pessoaPosition < 80)  { 
@@ -24,11 +24,11 @@ const loop = setInterval(() =>{
         obstaculo.style.animation = 'none';
         obstaculo.style.left = '${obstaculoPosition} px';
 
-        mario.style.animation = 'none';
-        mario.style.left = '${marioPosition} px';
+        pessoa.style.animation = 'none';
+        pessoa.style.left = '${pessoaPosition} px';
 
-        mario.src='pessoa.gameover.jpeg';
-        mario.style.width= '75px';
+        pessoa.src='pessoa.gameover.jpeg';
+        pessoa.style.width= '75px';
 
 
       }
