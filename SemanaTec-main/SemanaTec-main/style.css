@@ -15,58 +15,57 @@ body {
     display: flex;
     justify-content:center;
     align-items: center;
-    
-
 }
 
 .game-board {
 
 width: 100%;
-height: 500px;
-border-bottom: 15px solid rgb(35, 160, 35);
+height: 900px;
 margin: 0 auto;
 position: relative;
 overflow: hidden;
-background: linear-gradient(#87CEEB,#E0F6FF);
+background-position: center;
+
 }
 
 .score{
-position: absolute;
-top: 30px;
-left: 0%;
-font-size:x-large;
+   position: absolute; 
+   top: 30px;
+   left: 0;
+   font-size: x-large ;
 }
-
 
 .obstaculo {
     position:absolute;
-    bottom: 0;
-    width: 200px;
+    bottom: 250px;
+    width: 150px;
     animation: obstaculo-animation 3s infinite linear;
-
 }
   
 
 .pessoa { 
  width: 150px;
  position:absolute;
- bottom: 0px;
+ bottom: 250px;
 }
+
+
 
 
 .fundo{
     position:absolute;
-    width: 550px; 
+    width: 100%; 
+    height: 900px ;
     animation: fundo-animation 20s infinite linear;
 }
 
 .jump{
-    animation: jump-pessoa 500ms ease-out;
+    animation: jump 1.1s linear;
 }
 
 @keyframes obstaculo-animation {
     from{
-    right: -80px   
+    right: -80px ;  
 
     }
     to {
@@ -76,28 +75,17 @@ font-size:x-large;
 
 
     
-
-@keyframes fundo-animaton{
-    from { right: -550px;}
-
-    to{ right: 100%;}
-}
- 
-.jump{
-    animation: jump 1.1s linear;
-}
-
 @keyframes jump {
     0% {bottom:0;
     }
 
-    30%{bottom: 80px;
+    40%{bottom: 180px;
     }
  
-    50%{bottom: 100px;
+    50%{bottom: 180px;
     }
 
-    60%{bottom: 80px;
+    60%{bottom: 180px;
     }
 
     100%  {bottom: 0;
@@ -105,4 +93,13 @@ font-size:x-large;
     
 
 }
+
+@keyframes fundo-animaton{
+    from { right: -550px;}
+
+    to{ right: 100%;}
+}
+ 
+
+ 
 
